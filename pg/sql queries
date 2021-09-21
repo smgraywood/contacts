@@ -1,0 +1,16 @@
+CREATE TABLE contacts (Contact_ID int generated always as identity, Name text, Email text, Phone varchar, Notes text);
+
+
+INSERT INTO contacts(Name, Email, Phone, Notes)
+VALUES
+('Elizabeth Hadik-Barkoczy', 'elizabeth@gmail.com', '415-880-1234', 'Elizabeth is an awesome computer scientist!'),
+('Jen Huynh', 'jen@gmail.com', '510-331-1234', 'Jen is a kickass dev!'),
+('Malika Kassen-Lao', 'malika@gmail.com', '408-123-1234', 'Malika is a Python genius!'),
+('Natalie Bencomo', 'natalie@gmail.com', '408-123-1234', 'Natalie is a Javascript legend!'),
+('Serena Chen', 'serena@gmail.com', '831-123-1234', 'Serena is a badass developer!'),
+('Shaylan Hawthorne', 'shay@gmail.com', '715-123-1234', 'Shay is a CSS legend!'),
+('Supriya Venkatachala', 'supriya@gmail.com', '710-123-1234', 'Supriya is a backend baller!'),
+('Tabby OMelay', 'tabbykatz@gmail.com', '510-926-8161', 'Tabby is a kickass engineer!'),
+('Tara Larsen', 'tara@gmail.com', '510-123-1234', 'Tara is a killer computer scientist!'),
+('Xiao Zhong', 'xiao@gmail.com', '801-123-1234', 'Xiao is backend badass!'),
+('Zelma Sedano', 'zelma@gmail.com', '773-123-1234', 'Zelma is a frontend queen!');

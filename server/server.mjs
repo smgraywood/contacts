@@ -1,14 +1,12 @@
 import express from "express";
 import mime from "mime-types";
 
-import taskRouter from "./taskRouter.mjs";
+import contactsRouter from "./contactsRouter.mjs";
 
 const app = express();
 
-app.use("/api/tasks", taskRouter);
+app.use("/api/contacts", contactsRouter);
 
-// Do not comment out or delete this end point. The React development server
-// won't start until it pings this end point successfully.
 app.get("/api/ping", (request, response) =>
   response.json({ response: "pong" }),
 );

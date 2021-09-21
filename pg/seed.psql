@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.3
--- Dumped by pg_dump version 13.3
+-- Dumped from database version 13.4
+-- Dumped by pg_dump version 13.4
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -19,6 +19,33 @@ SET row_security = off;
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
+
+--
+-- Name: contacts; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.contacts (
+    contact_id integer NOT NULL,
+    name text,
+    email text,
+    phone character varying,
+    notes text
+);
+
+
+--
+-- Name: contacts_contact_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+ALTER TABLE public.contacts ALTER COLUMN contact_id ADD GENERATED ALWAYS AS IDENTITY (
+    SEQUENCE NAME public.contacts_contact_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1
+);
+
 
 --
 -- Name: tasks; Type: TABLE; Schema: public; Owner: -
@@ -58,6 +85,25 @@ ALTER TABLE ONLY public.tasks ALTER COLUMN id SET DEFAULT nextval('public.tasks_
 
 
 --
+-- Data for Name: contacts; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.contacts (contact_id, name, email, phone, notes) FROM stdin;
+1	Elizabeth Hadik-Barkoczy	elizabeth@gmail.com	415-880-1234	Elizabeth is an awesome computer scientist!
+2	Jen Huynh	jen@gmail.com	510-331-1234	Jen is a kickass dev!
+3	Malika Kassen-Lao	malika@gmail.com	408-123-1234	Malika is a Python genius!
+4	Natalie Bencomo	natalie@gmail.com	408-123-1234	Natalie is a Javascript legend!
+5	Serena Chen	serena@gmail.com	831-123-1234	Serena is a badass developer!
+6	Shaylan Hawthorne	shay@gmail.com	715-123-1234	Shay is a CSS legend!
+7	Supriya Venkatachala	supriya@gmail.com	710-123-1234	Supriya is a backend baller!
+8	Tabby OMelay	tabbykatz@gmail.com	510-926-8161	Tabby is a kickass engineer!
+9	Tara Larsen	tara@gmail.com	510-123-1234	Tara is a killer computer scientist!
+10	Xiao Zhong	xiao@gmail.com	801-123-1234	Xiao is backend badass!
+11	Zelma Sedano	zelma@gmail.com	773-123-1234	Zelma is a frontend queen!
+\.
+
+
+--
 -- Data for Name: tasks; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -68,6 +114,13 @@ COPY public.tasks (id, name) FROM stdin;
 4	Advocate for living wage
 5	Provide universal health care
 \.
+
+
+--
+-- Name: contacts_contact_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.contacts_contact_id_seq', 11, true);
 
 
 --
