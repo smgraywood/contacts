@@ -6,9 +6,6 @@ import Contacts from "./Contacts";
 
 const App = () => (
   <main>
-    <nav>
-      <Link to="/">Home</Link> | <Link to="dashboard">Dashboard</Link>
-    </nav>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/dashboard" element={<Dashboard />} />

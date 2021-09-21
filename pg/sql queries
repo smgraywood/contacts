@@ -15,6 +15,10 @@ VALUES
 ('Xiao Zhong', 'xiao@gmail.com', '801-123-1234', 'Xiao is backend badass!'),
 ('Zelma Sedano', 'zelma@gmail.com', '773-123-1234', 'Zelma is a frontend queen!');
 
+INSERT INTO contacts(Name, Email, Phone, Notes)
+VALUES
+('Sarah Graywood', 'sarah@gmail.com', '831-123-1234', 'Sarah is a CSS master!');
+
 ALTER TABLE Contacts
 ADD image_url text;
 
@@ -47,7 +51,7 @@ SET image_url='https://miro.medium.com/max/800/1*Ybo6P1Yep-vyWIObfABEdg.jpeg'
 WHERE contact_id= 7;
 
 UPDATE contacts 
-SET image_url='https://avatars.githubusercontent.com/u/55110763?v=4' 
+SET image_url='https://miro.medium.com/max/1400/1*0qigN_I6DSUX5WpAEDZDHg.png' 
 WHERE contact_id= 8;
 
 UPDATE contacts 
@@ -61,3 +65,8 @@ WHERE contact_id= 10;
 UPDATE contacts 
 SET image_url='https://miro.medium.com/max/1000/1*xQ8Ba3ioXfLQ_fcW_d8T-w.png' 
 WHERE contact_id= 11;
+
+UPDATE contacts 
+SET image_url='https://miro.medium.com/max/1000/1*B-TqqcFf426p4U0EIgIL8w.png' 
+WHERE contact_id= 12;
+
