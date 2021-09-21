@@ -5,16 +5,16 @@ const db = initDb();
 
 export const getContacts = () => db.any("SELECT * FROM contacts");
 
-export const addContact = ({ name, email, phone, notes, photo }) =>
+export const addContact = ({ name, email, phone, notes, image_url }) =>
   db.one(
     "INSERT INTO contacts(name, email, phone, notes, photo) VALUES(*thing1, *thing2, *thing3, *thing4, *thing5, *thing6) RETURNING *",
-    [name, email, phone, notes, photo],
+    [name, email, phone, notes, image_url],
   );
 
-export const updateContact = ({ name, email, phone, notes, photo }, id) =>
+export const updateContact = ({ name, email, phone, notes, image_url }, contact_id) =>
   db.one(
     "UPDATE contacts set name=*thing1, email=*thing2, phone=*thing3, notes=*thing4, photo=*thing5 WHERE id=*thing6 RETURNING *",
-    [name, email, phone, notes, photo, id],
+    [name, email, phone, notes, image_url, contact_id],
   );
 
 function initDb() {

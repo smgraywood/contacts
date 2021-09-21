@@ -29,7 +29,8 @@ CREATE TABLE public.contacts (
     name text,
     email text,
     phone character varying,
-    notes text
+    notes text,
+    image_url text
 );
 
 
@@ -88,18 +89,18 @@ ALTER TABLE ONLY public.tasks ALTER COLUMN id SET DEFAULT nextval('public.tasks_
 -- Data for Name: contacts; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.contacts (contact_id, name, email, phone, notes) FROM stdin;
-1	Elizabeth Hadik-Barkoczy	elizabeth@gmail.com	415-880-1234	Elizabeth is an awesome computer scientist!
-2	Jen Huynh	jen@gmail.com	510-331-1234	Jen is a kickass dev!
-3	Malika Kassen-Lao	malika@gmail.com	408-123-1234	Malika is a Python genius!
-4	Natalie Bencomo	natalie@gmail.com	408-123-1234	Natalie is a Javascript legend!
-5	Serena Chen	serena@gmail.com	831-123-1234	Serena is a badass developer!
-6	Shaylan Hawthorne	shay@gmail.com	715-123-1234	Shay is a CSS legend!
-7	Supriya Venkatachala	supriya@gmail.com	710-123-1234	Supriya is a backend baller!
-8	Tabby OMelay	tabbykatz@gmail.com	510-926-8161	Tabby is a kickass engineer!
-9	Tara Larsen	tara@gmail.com	510-123-1234	Tara is a killer computer scientist!
-10	Xiao Zhong	xiao@gmail.com	801-123-1234	Xiao is backend badass!
-11	Zelma Sedano	zelma@gmail.com	773-123-1234	Zelma is a frontend queen!
+COPY public.contacts (contact_id, name, email, phone, notes, image_url) FROM stdin;
+1	Elizabeth Hadik-Barkoczy	elizabeth@gmail.com	415-880-1234	Elizabeth is an awesome computer scientist!	https://miro.medium.com/max/1000/1*4nX8TmILPEJmGILBP7MMEA.jpeg
+2	Jen Huynh	jen@gmail.com	510-331-1234	Jen is a kickass dev!	https://miro.medium.com/max/888/1*Zo8LrzhmshsU0breLTEn_w.jpeg
+3	Malika Kassen-Lao	malika@gmail.com	408-123-1234	Malika is a Python genius!	https://miro.medium.com/max/766/1*JCaLQO-pGkk3XgsJc6ecfw.jpeg
+4	Natalie Bencomo	natalie@gmail.com	408-123-1234	Natalie is a Javascript legend!	https://miro.medium.com/max/1000/1*flGtTUndV0fjYxQORaZHOw.jpeg
+5	Serena Chen	serena@gmail.com	831-123-1234	Serena is a badass developer!	https://miro.medium.com/max/500/1*W9db-RM1HrL0Gxft5UlWog.jpeg
+6	Shaylan Hawthorne	shay@gmail.com	715-123-1234	Shay is a CSS legend!	https://miro.medium.com/max/904/1*KYs1HNAzsIgTUTtnPOBhLg.jpeg
+7	Supriya Venkatachala	supriya@gmail.com	710-123-1234	Supriya is a backend baller!	https://miro.medium.com/max/800/1*Ybo6P1Yep-vyWIObfABEdg.jpeg
+8	Tabby OMelay	tabbykatz@gmail.com	510-926-8161	Tabby is a kickass engineer!	https://avatars.githubusercontent.com/u/55110763?v=4
+9	Tara Larsen	tara@gmail.com	510-123-1234	Tara is a killer computer scientist!	https://miro.medium.com/max/696/1*JrVohFj1RVN750wOdFfkMQ.jpeg
+10	Xiao Zhong	xiao@gmail.com	801-123-1234	Xiao is backend badass!	https://miro.medium.com/max/660/1*CsVsesZdn_ZM0IGlw1vAyg.jpeg
+11	Zelma Sedano	zelma@gmail.com	773-123-1234	Zelma is a frontend queen!	https://miro.medium.com/max/1000/1*xQ8Ba3ioXfLQ_fcW_d8T-w.png
 \.
 
 
